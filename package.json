@@ -1,0 +1,13 @@
+{
+  "name": "verify_auth",
+  "version": "1.0.0",
+  "description": "Verify Auth",
+  "repository": "",
+  "author": "Faheem",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.73.0",
+    "fast-csv": "^4.3.6",
+    "uuid": "^8.3.2"        
+  }
+}
