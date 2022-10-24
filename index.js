@@ -27,7 +27,7 @@ async function checkUserExists(key,value) {
 }
 
 
-exports.handle = async (event, context) => {
+exports.handler = async (event, context) => {
     console.log('event',event);    
     
     const expectedAnswer = event.request.privateChallengeParameters.code; 
@@ -74,7 +74,7 @@ exports.handle = async (event, context) => {
     else {
 
       const params = {
-        TableName: "user_data",      
+        TableName: "broker",      
         "Item": {
           "brokerId":username,
           "email": email,

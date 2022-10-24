@@ -3,7 +3,7 @@ service: VerifyAuth
 
 provider:
   name: aws
-  profile: tombcf
+  profile: faheembcf
   runtime: nodejs14.x
   region: eu-west-2
   stage: test
@@ -13,13 +13,13 @@ provider:
 
 package:
   include:
-    - src/handler.js
+    - index.js
 
 
 functions:
   cognitoVerifyAuth:
     role: arn:aws:lambda:eu-west-2:444817108422:function:broker_verify_auth
-    handler: src/handler.handle
+    handler: index.handler
     timeout: 100
     memorySize: 128 #512 default, 1536 is the max-- this also scales processor resources.
     description: "Verify Auth"
